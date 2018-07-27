@@ -23,7 +23,7 @@ try:
         detect = GPIO.input(4)
 
         # When PIR sensor detect motion
-        if(detect == 1):
+        if(detect):
             print("Motion Detected")
             # Blink LED
             GPIO.output(10,GPIO.HIGH)
