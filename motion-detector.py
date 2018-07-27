@@ -5,10 +5,10 @@ import RPi.GPIO as GPIO
 import send_data
 
 # Setup GPIO
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(4, GPIO.IN, GPIO.PUD_DOWN)
-GPIO.setup(10, GPIO.OUT)
+------------------------
+------------------------
+------------------------
+------------------------
 # Initiate a counter
 i = 0
 
@@ -20,22 +20,25 @@ try:
         print(i)
 
 	# Detect motion via PIR Sensor
-        detect = GPIO.input(4)
+        __________________________
 
         # When PIR sensor detect motion
         if(detect):
             print("Motion Detected")
-            # Blink LED
-            GPIO.output(10,GPIO.HIGH)
+
             print("LED ON")
+            _________________________
+
             # Send data to server
-            send_data.send("SKYNET DETECT MOTION!")
+            send_data.send("PUT YOUR NAME HERE")
+
             # Wait a moment
             time.sleep(3)
-            GPIO.output(10,GPIO.LOW)
-            print("LED OFF")
 
-        # Wait a second before detecting further motion
+            print("LED OFF")
+            _________________________
+
+        # Wait a little before detecting further motion
         time.sleep(0.5)
         # Increase a counter
         i += 1
