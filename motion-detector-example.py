@@ -21,14 +21,15 @@ try:
         if(detect == 1):
             print("Motion Detected")
             # Blink LED
-            GPIO.output(10,GPIO.HIGH)
-            print("LED ON")
+            # GPIO.output(10,GPIO.HIGH)
+            # print("LED ON")
             # Wait 1 second
-            time.sleep(2)
-            GPIO.output(10,GPIO.LOW)
-            print("LED OFF")
+            # time.sleep(2)
+            # GPIO.output(10,GPIO.LOW)
+            # print("LED OFF")
             # Send data to server
-            send_data.send("BOON")
+            # send_data.send("BOON")
+
         # Wait for further motion
         time.sleep(1)
         print(".",end="")
