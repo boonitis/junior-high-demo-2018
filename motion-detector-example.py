@@ -29,7 +29,7 @@ try:
             GPIO.output(10,GPIO.HIGH)
             print("LED ON")
             # Send data to server
-            send_data.send("BOON DETECT MOTION")
+            send_data.send("SKYNET DETECT MOTION!")
             # Wait a moment
             time.sleep(3)
             GPIO.output(10,GPIO.LOW)
