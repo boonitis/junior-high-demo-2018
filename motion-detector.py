@@ -5,10 +5,10 @@ import RPi.GPIO as GPIO
 import send_data
 
 # Setup GPIO
-------------------------
-------------------------
-------------------------
-------------------------
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(_____, GPIO.IN, GPIO.PUD_DOWN)
+GPIO.setup(_____), GPIO.OUT)
 # Initiate a counter
 i = 0
 
@@ -20,26 +20,28 @@ try:
         print(i)
 
 	# Detect motion via PIR Sensor
-        __________________________
+        --------------------------------
 
         # When PIR sensor detect motion
         if(detect):
             print("Motion Detected")
 
             print("LED ON")
-            _________________________
+            --------------------------------
 
             # Send data to server
-            send_data.send("PUT YOUR NAME HERE")
+            send_data.send("PutYourNameHere")
 
             # Wait a moment
-            time.sleep(3)
+            time.sleep(10)
 
             print("LED OFF")
-            _________________________
+            --------------------------------
+
+            i = 0
 
         # Wait a little before detecting further motion
-        time.sleep(0.5)
+        time.sleep(1)
         # Increase a counter
         i += 1
 

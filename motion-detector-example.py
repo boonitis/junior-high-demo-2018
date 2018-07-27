@@ -33,13 +33,15 @@ try:
             send_data.send("PutYourNameHere")
 
             # Wait a moment
-            time.sleep(3)
+            time.sleep(10)
 
             print("LED OFF")
             GPIO.output(10,GPIO.LOW)
 
+            i = 0
+
         # Wait a little before detecting further motion
-        time.sleep(0.5)
+        time.sleep(1)
         # Increase a counter
         i += 1
 
