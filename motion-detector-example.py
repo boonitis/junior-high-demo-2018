@@ -28,7 +28,7 @@ try:
             GPIO.output(10,GPIO.LOW)
             print("LED OFF")
             # Send data to server
-            sende_data.send("BOON")
+            send_data.send("BOON")
         # Wait for further motion
         time.sleep(1)
 
