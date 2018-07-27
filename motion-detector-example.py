@@ -28,12 +28,12 @@ try:
             # Blink LED
             GPIO.output(10,GPIO.HIGH)
             print("LED ON")
-            # Wait 1 second
-            time.sleep(1)
+            # Send data to server
+            send_data.send("BOON DETECT MOTION")
+            # Wait a moment
+            time.sleep(3)
             GPIO.output(10,GPIO.LOW)
             print("LED OFF")
-            # Send data to server
-            send_data.send("BOON")
 
         # Wait a second before detecting further motion
         time.sleep(1)
