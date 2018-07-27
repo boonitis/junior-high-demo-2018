@@ -2,6 +2,7 @@
 
 import time
 import RPi.GPIO as GPIO
+import send_data
 
 # Setup GPIO
 GPIO.setwarnings(False)
@@ -26,8 +27,11 @@ try:
             time.sleep(1)
             GPIO.output(10,GPIO.LOW)
             print("LED OFF")
+            # Send data to server
+            sender_data.send("BOON")
         # Wait for further motion
         time.sleep(1)
+
 
 except KeyboardInterrupt:
     GPIO.cleanup()
