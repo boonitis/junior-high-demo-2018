@@ -36,7 +36,7 @@ try:
             print("LED OFF")
 
         # Wait a second before detecting further motion
-        time.sleep(1)
+        time.sleep(0.5)
         # Increase a counter
         i += 1
 
