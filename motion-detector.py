@@ -43,5 +43,5 @@ try:
         # Increase a counter
         i += 1
 
-except KeyboardInterrupt:
+except Exception:
     GPIO.cleanup()
