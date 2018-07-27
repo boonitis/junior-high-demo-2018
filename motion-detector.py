@@ -25,20 +25,17 @@ try:
         # When PIR sensor detect motion
         if(detect):
             print("Motion Detected")
-
-            print("LED ON")
+            # Blink LED
             GPIO.output(10,GPIO.HIGH)
-
+            print("LED ON")
             # Send data to server
             send_data.send("SKYNET DETECT MOTION!")
-
             # Wait a moment
             time.sleep(3)
-
-            print("LED OFF")
             GPIO.output(10,GPIO.LOW)
+            print("LED OFF")
 
-        # Wait a little before detecting further motion
+        # Wait a second before detecting further motion
         time.sleep(0.5)
         # Increase a counter
         i += 1
