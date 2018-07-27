@@ -30,7 +30,7 @@ try:
             GPIO.output(10,GPIO.HIGH)
 
             # Send data to server
-            send_data.send("SKYNET DETECT MOTION!")
+            send_data.send("PutYourNameHere")
 
             # Wait a moment
             time.sleep(3)
